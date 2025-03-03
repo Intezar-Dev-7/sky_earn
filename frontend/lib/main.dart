@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/features/Home/bottom_navigation_bar/bottom_navigation.dart';
 import 'package:frontend/features/Home/onBoarding/splashscreen.dart';
+import 'package:get/get.dart';
 
 void main() {
+  Get.put(NavigationController()); // Ensuring it's globally available
+
   runApp(const MyApp());
 }
 
@@ -10,12 +14,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
       home: SplashScreen(),
     );
   }

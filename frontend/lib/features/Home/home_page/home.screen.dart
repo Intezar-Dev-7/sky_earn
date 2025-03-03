@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/utils/constants/colors.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,10 +16,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         title: Text(
-          "Profile Screen",
+          "Home",
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),
         ),
+      ),
+      body: Center(
+        child: Text("Hello", style: TextStyle(color: Colors.white)),
       ),
     );
   }

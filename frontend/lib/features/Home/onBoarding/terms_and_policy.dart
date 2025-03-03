@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:frontend/common/widgets/dialogbox.dart';
 import 'package:frontend/features/authentication/login/login.dart';
 import 'package:frontend/utils/constants/colors.dart';
+import 'package:get/get.dart';
 
 class TermsAndPolicy extends StatelessWidget {
   const TermsAndPolicy({super.key});
@@ -113,8 +114,7 @@ class TermsAndPolicy extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                    Get.offAll(() => LoginScreen()); // Using GetX navigation
                   },
                   child: const Text("Accept",
                       style: TextStyle(color: Colors.white)),

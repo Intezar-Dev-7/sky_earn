@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:frontend/features/Home/onBoarding/terms_and_policy.dart';
 import 'package:frontend/utils/constants/colors.dart';
+import 'package:get/get.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -15,10 +16,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(
-        Duration(seconds: 2),
-        () => Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext) => TermsAndPolicy())));
+    Timer(Duration(seconds: 2), () {
+      Get.offAll(() => TermsAndPolicy());
+    });
   }
 
   @override

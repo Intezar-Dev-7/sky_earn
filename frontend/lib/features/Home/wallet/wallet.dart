@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/utils/constants/colors.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({super.key});
+class WalletScreen extends StatefulWidget {
+  const WalletScreen({super.key});
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<WalletScreen> createState() => _WalletScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _WalletScreenState extends State<WalletScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +16,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         title: Text(
-          "Profile Screen",
+          "Wallet Screen",
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),
         ),

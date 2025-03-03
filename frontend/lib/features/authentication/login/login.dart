@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/features/Home/bottom_navigation_bar/bottom_navigation.dart';
+
 import 'package:frontend/utils/constants/colors.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -40,6 +43,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               onPressed: () {
                 // TODO: implement google sign  in feature
+                // Temporary
+                Get.offAll(() => BottomNavBar()); // Using GetX navigation
               },
               icon: Icon(
                 Iconsax.google_1,
