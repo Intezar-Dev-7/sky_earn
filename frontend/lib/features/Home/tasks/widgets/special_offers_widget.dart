@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/utils/constants/colors.dart';
-import 'package:frontend/utils/constants/image_strings.dart';
 
 class SpecialOffersWidget extends StatelessWidget {
   const SpecialOffersWidget({
@@ -36,7 +35,10 @@ class SpecialOffersWidget extends StatelessWidget {
             Text(
               title,
               style: TextStyle(
-                  color: textWhite, fontSize: 20, fontWeight: FontWeight.bold,),
+                color: textWhite,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             Text(
               subtitle,

@@ -3,6 +3,8 @@ import 'package:frontend/features/Home/tasks/task.dart';
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:get/get.dart';
 
+import 'package:iconsax_flutter/iconsax_flutter.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
