@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/features/Home/tasks/task.dart';
 import 'package:frontend/utils/constants/colors.dart';
+import 'package:get/get.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -21,8 +24,76 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),
         ),
       ),
-      body: Center(
-        child: Text("Hello", style: TextStyle(color: Colors.white)),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Container(
+              height: 100,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(224, 226, 252, 1).withOpacity(0.1),
+                borderRadius: BorderRadius.circular(18),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Row(
+                  // Change Column to Row
+                  mainAxisAlignment:
+                      MainAxisAlignment.spaceBetween, // Push elements apart
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Available coins",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                        SizedBox(height: 5),
+                        Row(
+                          // For icon and text
+                          children: [
+                            Icon(
+                              Iconsax.coin,
+                              color: Colors.yellow,
+                            ),
+                            SizedBox(width: 7),
+                            Text(
+                              "200",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: const Size(120, 40),
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                      ),
+                      onPressed: () {
+                        Get.offAll(() => TasksScreen());
+                      },
+                      child: Text(
+                        "Earn More",
+                        style: TextStyle(
+                            color: const Color.fromARGB(255, 19, 2, 49),
+                            fontSize: 18),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
