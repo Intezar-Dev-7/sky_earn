@@ -100,16 +100,17 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
               child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2, // Number of columns
-                    crossAxisSpacing: 10, // Horizontal spacing
-                    mainAxisSpacing: 10, // Vertical spacing
-                    childAspectRatio: 1.4, // Adjust item width/height ratio
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 6,
+                    mainAxisSpacing: 40,
+                    childAspectRatio: 1.4,
                   ),
                   itemCount: 6,
                   itemBuilder: (context, index) {
                     return ContainerWidget(
-                        diamondsNumber: '${(index + 1) * 100}',
-                        coinsNumber: '${(index + 1) * 800} coins');
+                      diamondsNumber: '${(index + 1) * 100} ',
+                      coinsNumber: '${(index + 1) * 800} coins',
+                    );
                   }),
             )
           ],

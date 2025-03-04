@@ -19,7 +19,7 @@ class _WalletScreenState extends State<WalletScreen> {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         title: Text(
-          "Wallet Screen",
+          "Wallet",
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),
         ),
