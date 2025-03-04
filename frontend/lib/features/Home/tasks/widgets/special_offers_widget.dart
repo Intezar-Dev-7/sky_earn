@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:frontend/utils/constants/image_strings.dart';
 
-class ReadAndEarnWidget extends StatelessWidget {
-  const ReadAndEarnWidget({
+class SpecialOffersWidget extends StatelessWidget {
+  const SpecialOffersWidget({
     super.key,
     required this.image,
     required this.title,
