@@ -5,7 +5,7 @@ import 'package:frontend/features/Home/profile/widgets/user_details.dart';
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:frontend/utils/constants/image_strings.dart';
 
-import '../../../common/widgets/app_bar.dart';
+import '../../../common/widgets/custom_app_bar.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
