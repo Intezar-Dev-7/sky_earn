@@ -30,8 +30,7 @@ class ContainerWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image(
-                    image: AssetImage(diamondImage),
-                    width: 20,
+                    image: AssetImage(ImagesString.diamondImage),
                   ),
                   SizedBox(width: 5),
                   Text(
@@ -53,7 +52,7 @@ class ContainerWidget extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image(image: AssetImage(diamondImage), width: 10),
+                    Image(image: AssetImage(ImagesString.diamondImage), width: 10),
                     SizedBox(width: 3),
                     Text(
                       diamondsNumber,
@@ -66,7 +65,7 @@ class ContainerWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image(
-                    image: AssetImage(coinIcon),
+                    image: AssetImage(ImagesString.diamondImage),
                     width: 10,
                   ),
                   SizedBox(width: 5),

@@ -56,7 +56,7 @@ class _WalletScreenState extends State<WalletScreen> {
                             Row(
                               // For icon and text
                               children: [
-                                Image.asset(coinIcon, width: 40),
+                                Image.asset(ImagesString.coinIcon, width: 40),
                                 SizedBox(width: 7),
                                 Text(
                                   "200",

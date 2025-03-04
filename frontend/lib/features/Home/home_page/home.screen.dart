@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/features/Home/home_page/widgets/container_widget.dart';
 import 'package:frontend/features/Home/tasks/task.dart';
 import 'package:frontend/utils/constants/colors.dart';
-import 'package:frontend/utils/constants/image_strings.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -55,7 +53,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         Row(
                           // For icon and text
                           children: [
-                            Image.asset(coinIcon, width: 20),
+                            Icon(
+                              Iconsax.coin,
+                              color: Colors.yellow,
+                            ),
                             SizedBox(width: 7),
                             Text(
                               "200",
@@ -85,28 +86,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: const Color.fromARGB(255, 19, 2, 49),
                             fontSize: 18),
                       ),
-                    ),
+                    )
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 25),
-            Expanded(
-              child: GridView.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 6,
-                    mainAxisSpacing: 40,
-                    childAspectRatio: 1.4,
-                  ),
-                  itemCount: 6,
-                  itemBuilder: (context, index) {
-                    return ContainerWidget(
-                      diamondsNumber: '${(index + 1) * 100} ',
-                      coinsNumber: '${(index + 1) * 800} coins',
-                    );
-                  }),
-            )
           ],
         ),
       ),
