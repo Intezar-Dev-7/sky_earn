@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/features/Home/profile/contactus_screen.dart';
+import 'package:frontend/features/Home/profile/privacy_policy_screen.dart';
+import 'package:frontend/features/Home/profile/terms_and_condition_screen.dart';
 import 'package:frontend/features/Home/profile/widgets/logout.dart';
 import 'package:frontend/features/Home/profile/widgets/options.dart';
 import 'package:frontend/features/Home/profile/widgets/user_details.dart';
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:frontend/utils/constants/image_strings.dart';
 
-import '../../../common/widgets/app_bar.dart';
+import '../../../common/widgets/custom_app_bar.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -13,6 +16,7 @@ class ProfileScreen extends StatefulWidget {
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
+
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
@@ -28,23 +32,46 @@ class _ProfileScreenState extends State<ProfileScreen> {
           children: [
             CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage(ImagesString.marketingImage),
+              backgroundImage: AssetImage(marketingImage),
             ),
             SizedBox(
               height: 10,
             ),
-            UserDetails(userName: 'Aman Patidar',emailId: 'amanboy@gmail.com'),
-            Option(icon: ImagesString.contactUsIcon, title: 'Contact Us'),
+            UserDetails(userName: 'Aman Patidar', emailId: 'amanboy@gmail.com'),
             Option(
-                icon: ImagesString.analyzeIcon, title: 'Terms and Conditions'),
+              icon: contactUsIcon,
+              title: 'Contact Us',
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ContactUs()));
+              },
+            ),
             Option(
-                icon: ImagesString.privacyPolicyIcon, title: 'Privacy Policy'),
-            LogOut(onTap: () {}),
+              icon: analyzeIcon,
+              title: 'Terms and Conditions',
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => TermsAndConditionScreen()));
+              },
+            ),
+            Option(
+              icon: privacyPolicyIcon,
+              title: 'Privacy Policy',
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => PrivacyPolicyScreen()));
+              },
+            ),
+            LogOut(onTap: () {
+              // TODO implement logout feature
+            }),
           ],
         ),
       ),
     );
   }
 }
-
-

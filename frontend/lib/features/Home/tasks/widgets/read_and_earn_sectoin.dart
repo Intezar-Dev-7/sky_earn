@@ -24,7 +24,7 @@ class ReadAndEarnSection extends StatelessWidget {
           Row(
             children: [
               Image.asset(
-                ImagesString.booksImage,
+                booksImage,
                 width: 50,
               ),
               SizedBox(
@@ -51,7 +51,7 @@ class ReadAndEarnSection extends StatelessWidget {
                         ),
                       ),
                       Image.asset(
-                        ImagesString.coinIcon,
+                        coinIcon,
                         width: 18,
                       ),
                       Text(

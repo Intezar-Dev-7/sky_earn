@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/common/widgets/button.dart';
+import 'package:frontend/features/Home/tasks/redeem_screen.dart';
+
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:frontend/utils/constants/image_strings.dart';
+import 'package:get/get.dart';
 
 class BalanceAndRedeemSection extends StatelessWidget {
   const BalanceAndRedeemSection({
@@ -35,7 +38,7 @@ class BalanceAndRedeemSection extends StatelessWidget {
               Row(
                 children: [
                   Image.asset(
-                    ImagesString.coinIcon,
+                    coinIcon,
                     width: 20,
                   ),
                   Text(
@@ -53,7 +56,9 @@ class BalanceAndRedeemSection extends StatelessWidget {
           CustomButton(
             text: 'Redeem',
             textSize: 16,
-            onPressed: () {},
+            onPressed: () {
+              Get.to(RedeemScreen());
+            },
           ),
         ],
       ),

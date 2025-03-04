@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:frontend/utils/constants/colors.dart';
 
@@ -6,7 +5,9 @@ import '../../utils/constants/image_strings.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
-    super.key, required this.title, required this.coins,
+    super.key,
+    required this.title,
+    required this.coins,
   });
 
   final String title;
@@ -31,7 +32,7 @@ class CustomAppBar extends StatelessWidget {
           child: Row(
             children: [
               Image.asset(
-                ImagesString.coinIcon,
+                coinIcon,
                 width: 14,
               ),
               SizedBox(

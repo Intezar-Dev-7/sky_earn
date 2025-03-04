@@ -46,7 +46,7 @@ class _TasksScreenState extends State<TasksScreen> {
               Row(
                 children: [
                   SpecialOffersWidget(
-                    image: ImagesString.gamepadImage,
+                    image: gamepadImage,
                     title: 'Game Tasks',
                     subtitle: 'Play Games & Earn',
                   ),
@@ -54,7 +54,7 @@ class _TasksScreenState extends State<TasksScreen> {
                     width: 10,
                   ),
                   SpecialOffersWidget(
-                    image: ImagesString.ideasImage,
+                    image: ideasImage,
                     title: 'Quiz Tasks',
                     subtitle: 'Give Answers & Earn',
                   ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/features/Home/tasks/task.dart';
+import 'package:frontend/features/Home/tasks/task_screen.dart';
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:frontend/utils/constants/image_strings.dart';
 import 'package:get/get.dart';
@@ -56,7 +56,7 @@ class _WalletScreenState extends State<WalletScreen> {
                             Row(
                               // For icon and text
                               children: [
-                                Image.asset(ImagesString.coinIcon, width: 40),
+                                Image.asset(coinIcon, width: 40),
                                 SizedBox(width: 7),
                                 Text(
                                   "200",

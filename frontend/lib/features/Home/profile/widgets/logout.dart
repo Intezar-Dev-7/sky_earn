@@ -1,11 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:frontend/utils/constants/image_strings.dart';
 
 class LogOut extends StatelessWidget {
   const LogOut({
-    super.key, required this.onTap,
+    super.key,
+    required this.onTap,
   });
   final VoidCallback onTap;
 
@@ -20,7 +20,7 @@ class LogOut extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              ImagesString.logoutIcon,
+              logoutIcon,
               height: 30,
               width: 30,
             ),

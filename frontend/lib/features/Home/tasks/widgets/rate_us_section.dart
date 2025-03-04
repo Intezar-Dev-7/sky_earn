@@ -43,12 +43,11 @@ class RateUsSection extends StatelessWidget {
               SizedBox(
                 height: 5,
               ),
-              CustomButton(
-                  text: 'Rate us', onPressed: () {}, textSize: 12)
+              CustomButton(text: 'Rate us', onPressed: () {}, textSize: 12)
             ],
           ),
           Image.asset(
-            ImagesString.marketingImage,
+            marketingImage,
             width: 100,
           ),
         ],

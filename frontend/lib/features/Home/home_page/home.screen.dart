@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/features/Home/bottom_navigation_bar/bottom_navigation.dart';
 import 'package:frontend/features/Home/home_page/widgets/container_widget.dart';
-import 'package:frontend/features/Home/tasks/task.dart';
+
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:get/get.dart';
 
@@ -14,6 +15,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final controller = Get.put(NavigationController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       onPressed: () {
-                        Get.offAll(() => TasksScreen());
+                        controller.selectedIndex.value = 2;
                       },
                       child: Text(
                         "Earn More",

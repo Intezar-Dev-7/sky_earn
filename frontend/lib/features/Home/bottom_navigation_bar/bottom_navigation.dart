@@ -2,7 +2,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/features/Home/home_page/home.screen.dart';
 import 'package:frontend/features/Home/profile/profile.dart';
-import 'package:frontend/features/Home/tasks/task.dart';
+import 'package:frontend/features/Home/tasks/task_screen.dart';
 import 'package:frontend/features/Home/wallet/wallet.dart';
 import 'package:frontend/utils/constants/colors.dart';
 
