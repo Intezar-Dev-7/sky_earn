@@ -21,6 +21,9 @@ class _WalletScreenState extends State<WalletScreen> {
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),
         ),
       ),
+      body: Center(
+        child: Image.asset('assets/images/books.png'),
+      ),
     );
   }
 }
