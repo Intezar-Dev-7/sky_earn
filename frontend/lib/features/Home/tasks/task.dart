@@ -23,7 +23,7 @@ class _TasksScreenState extends State<TasksScreen> {
       appBar: AppBar(
         backgroundColor: backgroundColor,
         title: Text(
-          "Tasks Screen",
+          "Tasks",
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 25),
         ),
@@ -35,13 +35,13 @@ class _TasksScreenState extends State<TasksScreen> {
             children: [
               BalanceAndRedeemSection(),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               TaskScreenTitles(
                 title: "Special offers",
               ),
               SizedBox(
-                height: 10,
+                height: 5,
               ),
               Row(
                 children: [
@@ -61,23 +61,23 @@ class _TasksScreenState extends State<TasksScreen> {
                 ],
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               TaskScreenTitles(
                 title: "Read and Earn",
               ),
               SizedBox(
-                height: 10,
+                height: 5,
               ),
               ReadAndEarnSection(),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               TaskScreenTitles(
                 title: "Rate Us",
               ),
               SizedBox(
-                height: 10,
+                height: 5,
               ),
               RateUsSection(),
             ],
