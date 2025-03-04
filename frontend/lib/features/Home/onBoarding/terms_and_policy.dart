@@ -12,6 +12,7 @@ class TermsAndPolicy extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor,
       appBar: AppBar(
+        toolbarHeight: 80,
         backgroundColor: backgroundColor,
         title: const Text(
           "Sky Earn",
