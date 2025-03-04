@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:frontend/features/Home/home_page/widgets/container_widget.dart';
 import 'package:frontend/features/Home/tasks/task.dart';
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:get/get.dart';
@@ -93,6 +94,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 25),
+            Expanded(
+              child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, // Number of columns
+                    crossAxisSpacing: 10, // Horizontal spacing
+                    mainAxisSpacing: 10, // Vertical spacing
+                    childAspectRatio: 1.4, // Adjust item width/height ratio
+                  ),
+                  itemCount: 6,
+                  itemBuilder: (context, index) {
+                    return ContainerWidget(
+                        diamondsNumber: '${(index + 1) * 100}',
+                        coinsNumber: '${(index + 1) * 800} coins');
+                  }),
+            )
           ],
         ),
       ),
