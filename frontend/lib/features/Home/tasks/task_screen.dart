@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:frontend/features/Home/tasks/widgets/read_and_earn_sectoin.dart';
 import 'package:frontend/features/Home/tasks/widgets/special_offers_widget.dart';
 import 'package:frontend/features/Home/tasks/widgets/titles_widget.dart';
+import 'package:frontend/features/game_task/game_tasks.dart';
+import 'package:frontend/features/quize_task/widgets/quize_tasks.dart';
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:frontend/utils/constants/image_strings.dart';
+import 'package:get/get.dart';
 
 import 'widgets/balance_and_redeem_section.dart';
 import 'widgets/rate_us_section.dart';
@@ -49,6 +52,7 @@ class _TasksScreenState extends State<TasksScreen> {
                     image: gamepadImage,
                     title: 'Game Tasks',
                     subtitle: 'Play Games & Earn',
+                    onPressed: ()=> Get.to(GameTasks()),
                   ),
                   SizedBox(
                     width: 10,
@@ -57,6 +61,7 @@ class _TasksScreenState extends State<TasksScreen> {
                     image: ideasImage,
                     title: 'Quiz Tasks',
                     subtitle: 'Give Answers & Earn',
+                    onPressed: ()=> Get.to(QuizTasks()),
                   ),
                 ],
               ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/common/widgets/button.dart';
 import 'package:frontend/features/Home/tasks/redeem_screen.dart';
-
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:frontend/utils/constants/image_strings.dart';
 import 'package:get/get.dart';
