@@ -55,8 +55,8 @@ class _WalletScreenState extends State<WalletScreen> {
           children: [
             Container(
               width: double.infinity,
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              height: 190,
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              height: 160,
               decoration: BoxDecoration(
                 color: white10,
                 borderRadius: BorderRadius.circular(16),
