@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -103,7 +103,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     crossAxisCount: 2,
                     crossAxisSpacing: 6,
                     mainAxisSpacing: 8,
-                    // childAspectRatio: 1.4,
                   ),
                   itemCount: 6,
                   itemBuilder: (context, index) {
