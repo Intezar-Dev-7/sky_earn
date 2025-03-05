@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:frontend/utils/constants/colors.dart';
 
 import 'package:frontend/utils/constants/image_strings.dart';
 
@@ -14,24 +15,30 @@ class ContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Expanded(
-        child: Container(
-          padding: EdgeInsets.all(10),
-          // height: 140,
-          // width: 175,
-          decoration: BoxDecoration(
-            color: Color.fromRGBO(224, 226, 252, 1).withOpacity(0.1),
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
+      child: Container(
+        decoration: BoxDecoration(
+          // color: white10,
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: white.withOpacity(0.2),width: 2,style: BorderStyle.solid),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              width: double.infinity,
+              height: 35,
+              decoration: BoxDecoration(
+                color: white.withOpacity(0.2),
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10)),
+              ),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image(
                     image: AssetImage(diamondImage),
-                    width: 25,
+                    width: 20,
                   ),
                   SizedBox(width: 5),
                   Text(
@@ -43,46 +50,44 @@ class ContainerWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                width: 60,
-                height: 35,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Color.fromRGBO(224, 226, 252, 1).withOpacity(0.1),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image(
-                        image: AssetImage(diamondImage),
-                        width: 10),
-                    SizedBox(width: 3),
-                    Text(
-                      diamondsNumber,
-                      style: TextStyle(color: Colors.white),
-                    )
-                  ],
-                ),
+            ),
+            Container(
+              width: 60,
+              height: 30,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: white10,
               ),
-              Row(
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image(
-                    image: AssetImage(coinIcon),
-                    width: 18,
-                  ),
-                  SizedBox(width: 5),
+                  Image(image: AssetImage(diamondImage), width: 14),
+                  SizedBox(width: 2),
                   Text(
-                    coinsNumber,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18),
-                  ),
+                    diamondsNumber,
+                    style: TextStyle(color: Colors.white),
+                  )
                 ],
               ),
-            ],
-          ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image(
+                  image: AssetImage(coinIcon),
+                  width: 18,
+                ),
+                SizedBox(width: 5),
+                Text(
+                  coinsNumber,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );
