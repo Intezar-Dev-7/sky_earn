@@ -20,12 +20,14 @@ class ReadAndEarn extends StatelessWidget {
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            HeadingSection(title: 'Read Articles',subtitle: 'You can read up to 7 articles per day',),
-            ArticleSection()
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              HeadingSection(title: 'Read Articles',subtitle: 'You can read up to 7 articles per day',),
+              ArticleSection()
+            ],
+          ),
         ),
       ),
     );
