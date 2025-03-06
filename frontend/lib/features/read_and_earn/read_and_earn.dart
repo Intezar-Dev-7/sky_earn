@@ -60,7 +60,9 @@ class ReadAndEarn extends StatelessWidget {
                             style: TextStyle(color: textBlack, fontSize: 44),
                           ),
                         ),
-                        SizedBox(width: 10,),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Expanded(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -74,7 +76,7 @@ class ReadAndEarn extends StatelessWidget {
                               Row(
                                 children: [
                                   Image.asset(
-                                    ImagesString.coinIcon,
+                                    coinIcon,
                                     width: 18,
                                   ),
                                   Text(
@@ -91,12 +93,18 @@ class ReadAndEarn extends StatelessWidget {
                           height: 35,
                           width: 80,
                           alignment: Alignment.center,
-                          margin:  EdgeInsets.only(right: 10),
+                          margin: EdgeInsets.only(right: 10),
                           decoration: BoxDecoration(
                             color: white.withOpacity(0.7),
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Text('Done', style: TextStyle(color: textBlack, fontSize: 16,fontWeight: FontWeight.w600),),
+                          child: Text(
+                            'Done',
+                            style: TextStyle(
+                                color: textBlack,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600),
+                          ),
                         ),
                       ],
                     ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:frontend/common/widgets/back_button.dart';
 import 'package:frontend/utils/constants/colors.dart';
 
 import '../../utils/constants/image_strings.dart';
