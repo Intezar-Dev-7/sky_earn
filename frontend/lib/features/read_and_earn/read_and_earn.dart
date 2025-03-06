@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/common/widgets/back_button.dart';
 import 'package:frontend/common/widgets/custom_app_bar.dart';
+import 'package:frontend/features/read_and_earn/widgets/article_section.dart';
+import 'package:frontend/common/widgets/heading_section.dart';
 import 'package:frontend/utils/constants/colors.dart';
 import 'package:frontend/utils/constants/image_strings.dart';
 
@@ -18,6 +20,7 @@ class ReadAndEarn extends StatelessWidget {
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 20),
+<<<<<<< HEAD
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -113,6 +116,16 @@ class ReadAndEarn extends StatelessWidget {
               ),
             )
           ],
+=======
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              HeadingSection(title: 'Read Articles',subtitle: 'You can read up to 7 articles per day',),
+              ArticleSection()
+            ],
+          ),
+>>>>>>> e2c1215f890c02c823789ab733a15fbc5f6fa70a
         ),
       ),
     );
